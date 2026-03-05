@@ -1,4 +1,4 @@
-* [English Version](./README_EN.md)
+* [English Version](./README.md)
 
 ### RTL8721Dx 手动配置WiFi连接AP示例（FreeRTOS）
 
