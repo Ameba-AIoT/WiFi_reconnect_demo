@@ -76,14 +76,19 @@ ameba.py build -p
 3️⃣ **Flash Programming**
 
 ```bash
-ameba.py flash --p COMx --image km4_boot_all.bin 0x08000000 0x8014000 --image km0_km4_app.bin 0x08014000 0x8200000
+ameba.py flash --p COMx --image boot.bin 0x08000000 0x8014000 --image app.bin 0x08014000 0x8200000
 ```
 
 > Note: Precompiled bin files are also provided in the project directory and can be flashed as follows:
 
 ```bash
-ameba.py flash --p COMx --image ../km4_boot_all.bin 0x08000000 0x8014000 --image ../km0_km4_app.bin 0x08014000 0x8200000
+ameba.py flash --p COMx --image ../boot.bin 0x08000000 0x8014000 --image ../app.bin 0x08014000 0x8200000
 ```
+
+> ⚠️ **Note on binary filenames**: The output filenames depend on your SDK revision.
+> The latest SDK generates `boot.bin` + `app.bin`;
+> older SDK revisions generate `km4_boot_all.bin` + `km0_km4_app.bin`.
+> Replace the filenames in the commands above to match your actual build output.
 
 4️⃣ **Open Serial Monitor**
 
